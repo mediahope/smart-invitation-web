@@ -1,8 +1,10 @@
 from flask import Flask, request, send_file
+from flask_cors import CORS
 from PIL import Image, ImageDraw, ImageFont
 import os
 
 app = Flask(__name__)
+CORS(app, origins=["https://mediahope.ru"])
 
 # Пути к файлам
 BASE_DIR = os.path.abspath(".")
